@@ -1,0 +1,15 @@
+{
+  "active_theme": "main",
+  "output_folder": "output/",
+  "global_output_format": "mp3",
+  "folders": {
+    "config": {
+      "path": "config/"
+    },
+    "themes": {
+      "path": "themes/"
+    }
+  }
+
+
+}
