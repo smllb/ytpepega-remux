@@ -9,7 +9,7 @@ class brahma {
     }
 
     public function build_screen($ps_screen_name) {
-        echo $ps_screen_name;
+        include $this->settings->get_element_path($ps_screen_name);
     }
 
     public function import_active_theme() {
