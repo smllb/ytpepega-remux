@@ -8,6 +8,18 @@
     },
     "themes": {
       "path": "themes/"
+    },
+    "components": {
+      "path": "components/"
+    },
+    "elements": {
+      "path": "elements/"
+    },
+    "media": {
+      "path": "media/"
+    },
+    "image": {
+      "path": "image/"
     }
   }
 

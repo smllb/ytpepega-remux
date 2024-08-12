@@ -7,7 +7,8 @@ class settings
     private $active_theme;
     private $themes_folder_path;
     private $config_folder_path;
-
+    private $components_folder_path;
+    private $elements_folder_path;
     private $output_folder;
     private $global_output_format;
 
@@ -35,8 +36,13 @@ class settings
 
         $this->output_folder = $this->raw_settings["output_folder"];
         $this->global_output_format = $this->raw_settings["global_output_format"];
+
         $this->config_folder_path = $this->raw_settings["folders"]["config"]["path"];
         $this->themes_folder_path = $this-> config_folder_path . $this->raw_settings["folders"]["themes"]["path"];
+
+        $this->components_folder_path = $this->raw_settings["folders"]["components"]["path"];
+        $this->elements_folder_path = $this->components_folder_path .  $this->raw_settings["folders"]["elements"]["path"];
+        // TODO: Make this automatic
     }
     public function generate_default_settings_file(): string | false {
         $vs_file_name = "settings";
@@ -68,8 +74,12 @@ class settings
 
     }
 
-    public function get_active_theme_path() {
+    public function get_active_theme_path(): string {
         return "./" .  $this->themes_folder_path . $this->active_theme . ".css";
+    }
+
+    public function get_element_path($ps_element_name): string {
+        return "./" .  $this->elements_folder_path . $ps_element_name . ".php";
     }
 
 }
