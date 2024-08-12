@@ -1,5 +1,60 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: red;
+    height: 100%;
+    width: 100%;
+
+}
+
+.main {
+    display: grid;
+    grid-template-areas:
+        "top"
+        "middle"
+        "bottom";
+    grid-template-rows: 100px 1fr 180px;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: orange;
+}
+
+.top {
+    grid-area: top;
+    background-color: lightblue;
+}
+.top > form {
+    height: 100%;
+}
+.url_form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    gap: 6px;
+}
+.url_form_input {
+    flex-grow: 1;
+}
+
+
+
+.middle {
+    grid-area: middle;
+    background-color: lightgreen;
+}
+
+.bottom {
+    grid-area: bottom;
+    background-color: lightcoral;
+}
+
+.output_format_form {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1;
+    align-items: flex-start;
 }
